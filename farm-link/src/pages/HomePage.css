@@ -1,0 +1,196 @@
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.home-hero {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.85rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(79, 110, 219, 0.08);
+  border-radius: 30px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+.eyebrow {
+  color: #4f6edb;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  color: #111827;
+}
+
+.hero-copy {
+  color: #475569;
+  max-width: 720px;
+  margin-top: 0.85rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.search-wrap {
+  display: grid;
+  gap: 0.85rem;
+  width: min(100%, 540px);
+}
+
+.search-label {
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 16px;
+  font-size: 1rem;
+  color: #111827;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #5d7fe5;
+  box-shadow: 0 0 0 4px rgba(93, 126, 229, 0.14);
+}
+
+.cards-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.farmer-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(79, 110, 219, 0.08);
+  border-radius: 28px;
+  padding: 1.5rem;
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.farmer-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 110, 219, 0.28);
+  box-shadow: 0 28px 68px rgba(15, 23, 42, 0.12);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.farmer-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.rating {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.product-name {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.product-description {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  color: #111827;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.chat-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 999px;
+  background: #4f6edb;
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 1.35rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+
+.chat-button:hover {
+  transform: translateY(-1px);
+  background: #3d5bc1;
+}
+
+.empty-state {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+  background: white;
+  color: #64748b;
+}
+
+.empty-state p:first-child {
+  font-size: 1.05rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chat-button {
+    width: 100%;
+  }
+}

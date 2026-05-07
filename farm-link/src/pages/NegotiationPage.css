@@ -1,0 +1,404 @@
+.negotiation-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.negotiation-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.negotiation-header h1 {
+  font-size: clamp(2.3rem, 3vw, 3.1rem);
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.negotiation-header p {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.negotiation-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.05);
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 110, 219, 0.35);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card.success {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.08);
+}
+
+.stat-card.savings {
+  border-color: #f39c12;
+  background: rgba(243, 156, 18, 0.08);
+}
+
+.stat-label {
+  display: block;
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #4f6edb;
+}
+
+.stat-card.success .stat-value {
+  color: #27ae60;
+}
+
+.stat-card.savings .stat-value {
+  color: #f39c12;
+}
+
+.negotiation-container {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.new-negotiation-btn {
+  background: #4f6edb;
+  color: white;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.new-negotiation-btn:hover {
+  background: #3d5bc1;
+  transform: translateY(-1px);
+}
+
+.new-negotiation-form {
+  background: rgba(79, 110, 219, 0.06);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(79, 110, 219, 0.18);
+}
+
+.new-negotiation-form h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.form-select,
+.form-input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-select:focus,
+.form-input:focus {
+  outline: none;
+  border-color: #5d7fe5;
+  box-shadow: 0 0 0 4px rgba(93, 126, 229, 0.12);
+}
+
+.price-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.currency {
+  font-weight: 700;
+  color: #4f6edb;
+  font-size: 1.2rem;
+}
+
+.price-input-group .form-input {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.price-savings {
+  margin-top: 0.5rem;
+  color: #27ae60;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #4f6edb 0%, #3d5bc1 100%);
+  color: white;
+  border: none;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(79, 110, 219, 0.18);
+}
+
+.negotiations-list {
+  margin-top: 2rem;
+}
+
+.negotiation-section {
+  margin-bottom: 2rem;
+}
+
+.negotiation-section h3 {
+  color: #111827;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.negotiation-card {
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.negotiation-card:hover {
+  border-color: rgba(79, 110, 219, 0.35);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.negotiation-card.accepted {
+  border-color: #27ae60;
+  background: rgba(39, 174, 96, 0.05);
+}
+
+.negotiation-card.rejected {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.05);
+  opacity: 0.88;
+}
+
+.negotiation-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.negotiation-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.farmer-name {
+  margin: 0;
+  color: #64748b;
+}
+
+.status-badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.accepted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.negotiation-details {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.details-row span {
+  color: #666;
+}
+
+.details-row strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.details-row.savings {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.details-row.total {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.negotiation-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.accept {
+  background: #27ae60;
+  color: white;
+}
+
+.action-btn.accept:hover {
+  background: #229954;
+  transform: translateY(-2px);
+}
+
+.action-btn.reject {
+  background: #e74c3c;
+  color: white;
+}
+
+.action-btn.reject:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.negotiation-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.negotiation-summary strong {
+  color: #667eea;
+  font-size: 1.1rem;
+  margin-left: auto;
+}
+
+.no-negotiations {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+}
+
+.no-negotiations p:first-child {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.no-negotiations p:last-child {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .negotiation-page {
+    padding: 1rem;
+  }
+
+  .negotiation-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .negotiation-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .negotiation-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    margin-top: 0.5rem;
+  }
+
+  .negotiation-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}

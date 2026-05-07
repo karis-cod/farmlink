@@ -1,0 +1,196 @@
+.search-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 28px;
+  border: 1px solid rgba(79, 110, 219, 0.08);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+}
+
+.search-header h1 {
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  margin-bottom: 0.85rem;
+  color: #111827;
+}
+
+.search-header p {
+  font-size: 1.05rem;
+  color: #475569;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.search-filters {
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  margin-bottom: 1.25rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 18px;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #5d7fe5;
+  box-shadow: 0 0 0 4px rgba(93, 126, 229, 0.12);
+}
+
+.category-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: white;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  border-color: #5d7fe5;
+  color: #1f2937;
+}
+
+.category-btn.active {
+  background: #4f6edb;
+  color: white;
+  border-color: #4f6edb;
+}
+
+.search-results {
+  margin-top: 2rem;
+}
+
+.results-count {
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(79, 110, 219, 0.08);
+  border-radius: 28px;
+  padding: 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  display: grid;
+  gap: 1rem;
+  min-height: 240px;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 26px 58px rgba(15, 23, 42, 0.12);
+  border-color: rgba(79, 110, 219, 0.3);
+}
+
+.product-emoji {
+  font-size: 2.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.category-tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #475569;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.farmer-name {
+  font-size: 0.95rem;
+  color: #4f6edb;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 1rem;
+  min-height: 2.7rem;
+}
+
+.product-footer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4f6edb;
+}
+
+.unit {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.no-results p:first-child {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.no-results p:last-child {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .search-page {
+    padding: 1.25rem;
+  }
+
+  .search-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
